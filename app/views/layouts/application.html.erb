@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mysite</title>
+    <link rel="icon" type="image/png" href="xicon.png"/>
+    <title>X Coan | <%= @page_title %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,15 +10,7 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <table>
-        <tr>
-          <td><a href="/">Home</a></td>
-          <td><a href="projects">Projects</a></td>
-        </tr>
-      </table>
-    </div>
-
+    <%= render "layouts/navbar" %>
     <%= yield %>
   </body>
 </html>
