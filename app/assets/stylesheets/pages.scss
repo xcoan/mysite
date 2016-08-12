@@ -3,4 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .topview {
   text-align: center;
+  .contact_table {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
