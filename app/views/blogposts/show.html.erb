@@ -1,0 +1,16 @@
+<div class = "container">
+  <div class = "title">
+    <p>
+      <strong><%= @blogpost.title %></strong>
+    </p>
+  </div>
+
+  <div class="text">
+    <p>
+      <%= @blogpost.text %>
+    </p>
+  </div>
+
+  <%= link_to 'Back to Index', blogposts_path %>
+  
+</div>

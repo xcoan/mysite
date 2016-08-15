@@ -1,0 +1,25 @@
+<!-- Shows all blog posts -->
+<h1>Blog Posts</h1>
+
+<table>
+  <% @blogposts.each do |blog| %>
+    <tr>
+      <th><%= blog.title %></th>
+    </tr>
+    <tr>
+      <td>
+        <%= blog.text %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= link_to 'Show', blogpost_path(blog) %></td>
+    </tr>
+    <tr>
+      <td>
+        <hr />
+      </td>
+    </tr>
+  <% end %>
+</table>
+<hr />
+<%= link_to 'New Post', new_blogpost_path %>
