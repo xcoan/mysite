@@ -12,7 +12,12 @@
       </td>
     </tr>
     <tr>
-      <td><%= link_to 'Show', blogpost_path(blog) %></td>
+      <td>
+        <%= link_to 'Show', blogpost_path(blog) %>
+        <%= link_to 'Edit', edit_blogpost_path(blog) %>
+        <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
     <tr>
       <td>
