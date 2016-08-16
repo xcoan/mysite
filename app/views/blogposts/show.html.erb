@@ -1,0 +1,19 @@
+<div class = "container">
+  <div class = "title">
+    <p>
+      <strong><%= @blogpost.title %></strong>
+    </p>
+  </div>
+
+  <div class="text">
+    <p>
+      <%= @blogpost.text %>
+    </p>
+  </div>
+
+  <% if current_user %>
+    <%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %>
+  <% end %>
+  <%= link_to 'Back to Index', blogposts_path %>
+
+</div>

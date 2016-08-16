@@ -1,0 +1,34 @@
+<!-- Shows all blog posts -->
+<h1>Blog Posts</h1>
+
+<table>
+  <% @blogposts.each do |blog| %>
+    <tr>
+      <th><%= blog.title %></th>
+    </tr>
+    <tr>
+      <td>
+        <%= blog.text %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= link_to 'Show', blogpost_path(blog) %>
+        <% if current_user %>
+          <%= link_to 'Edit', edit_blogpost_path(blog) %>
+          <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <hr />
+      </td>
+    </tr>
+  <% end %>
+</table>
+<hr />
+<% if current_user %>
+  <%= link_to 'New Post', new_blogpost_path %>
+<% end %>
