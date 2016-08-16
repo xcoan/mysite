@@ -1,4 +1,7 @@
 class BlogpostsController < ApplicationController
+
+  before_action :require_user, except: [:index, :show]
+
   # creates route for new post.
   def new
     @page_title = "New Blog"
