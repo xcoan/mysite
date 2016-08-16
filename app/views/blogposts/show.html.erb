@@ -11,7 +11,9 @@
     </p>
   </div>
 
-  <%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %>
+  <% if current_user %>
+    <%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %>
+  <% end %>
   <%= link_to 'Back to Index', blogposts_path %>
 
 </div>

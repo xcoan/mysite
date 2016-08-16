@@ -14,9 +14,11 @@
     <tr>
       <td>
         <%= link_to 'Show', blogpost_path(blog) %>
-        <%= link_to 'Edit', edit_blogpost_path(blog) %>
-        <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+        <% if current_user %>
+          <%= link_to 'Edit', edit_blogpost_path(blog) %>
+          <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </td>
     </tr>
     <tr>
@@ -27,4 +29,6 @@
   <% end %>
 </table>
 <hr />
-<%= link_to 'New Post', new_blogpost_path %>
+<% if current_user %>
+  <%= link_to 'New Post', new_blogpost_path %>
+<% end %>
