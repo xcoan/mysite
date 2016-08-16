@@ -1,14 +1,5 @@
 class UsersController < ApplicationController
 
-  def count
-    @count = User.count
-    if @count != 1
-      return true
-    else
-      return false
-    end
-  end
-
   def new
     @user = User.new
   end

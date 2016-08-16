@@ -15,14 +15,16 @@
     <% if current_user %>
       <table>
         <tr>
-          <td>
-            Welcome, <%= current_user.name %>
-          </td>
+          <td>Welcome, <%= current_user.name %></td>
         </tr>
         <tr>
-          <td>
-            <%= link_to 'Logout', controller: 'sessions', :action => :destroy %>
-          </td>
+          <td><%= link_to 'Logout', controller: 'sessions', :action => :destroy %></td>
+        </tr>
+      </table>
+    <% else %>
+      <table>
+        <tr>
+          <td><%= link_to 'Admin Login', controller: 'sessions', action: 'new' %></td>
         </tr>
       </table>
     <% end %>

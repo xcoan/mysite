@@ -1,5 +1,5 @@
 <div class="container">
-  <% if @count %>
+  <% if (User.count == 0) %>
     <h1>Signup new user</h1>
     <%= form_for @user do |f| %>
       <p>
