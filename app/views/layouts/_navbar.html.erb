@@ -1,33 +1,30 @@
 <!-- Creates navbar for top of site -->
 <div class = "navcontainter" style="padding-bottom: 10px;">
   <div class="nav">
-    <table>
-      <tr>
-        <td><a href="/">Home</a></td>
-        <td><%= link_to 'Projects', controller: 'pages', :action => :projects %></td>
-        <td><%= link_to 'Contact', controller: 'pages', :action => :contact %></td>
-        <td><%= link_to 'Blog', controller: 'blogposts', :action => :index %></td>
-      </tr>
-    </table>
-  </div>
+    <ul>
+      <li id = "leftlink">
+        <a href="/">Home</a>
+      </li>
+      <li id ="leftlink">
+        <%= link_to 'Projects', controller: 'pages', :action => :projects %>
+      </li>
+      <li id = "leftlink">
+        <%= link_to 'Contact', controller: 'pages', :action => :contact %>
+      </li>
+      <li id = "leftlink">
+        <%= link_to 'Blog', controller: 'blogposts', :action => :index %>
+      </li>
+      <% if current_user %>
+        <li id="rightlink">
+          <%= link_to 'Logout', controller: 'sessions', :action => :destroy %>
+        </li>
+      <% else %>
+        <li id="rightlink">
+          <%= link_to 'Admin Login', controller: 'sessions', action: 'new' %>
+        </li>
+      <% end %>
+    </ul>
 
-  <div class = 'usr'>
-    <% if current_user %>
-      <table>
-        <tr>
-          <td>Welcome, <%= current_user.name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to 'Logout', controller: 'sessions', :action => :destroy %></td>
-        </tr>
-      </table>
-    <% else %>
-      <table>
-        <tr>
-          <td><%= link_to 'Admin Login', controller: 'sessions', action: 'new' %></td>
-        </tr>
-      </table>
-    <% end %>
   </div>
 
 </div>
