@@ -1,8 +1,12 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .topview {
   text-align: center;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
   .contact_table {
     display: inline-block;
     margin-left: auto;
@@ -10,15 +14,21 @@
     img {
       width: 100px;
       height: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    }
+    td + td {
+      padding-left: 10px;
     }
   }
 }
 .main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	width: 70%;
 	float: left;
 }
 
 .rightpane {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   width: 30%;
   float: left;
 }
@@ -38,8 +48,9 @@
   border: 1px solid;
   min-height: 60px;
   img {
-    width: 300px;
+    max-width: 75%;
     height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   }
   table {
     margin-left: 25px;

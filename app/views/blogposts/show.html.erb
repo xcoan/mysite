@@ -3,17 +3,19 @@
     <p>
       <strong><%= @blogpost.title %></strong>
     </p>
+    <hr />
   </div>
 
   <div class="text">
     <p>
-      <%= @blogpost.text %>
+      <%= @blogpost.text.html_safe %>
     </p>
   </div>
-
-  <% if current_user %>
-    <%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %>
-  <% end %>
-  <%= link_to 'Back to Index', blogposts_path %>
+  <div class="buttons">
+    <% if current_user %>
+      <button><%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %></button>
+    <% end %>
+    <button><%= link_to 'Back to Index', blogposts_path %></button>
+  </div>
 
 </div>

@@ -1,34 +1,36 @@
 <!-- Shows all blog posts -->
-<h1>Blog Posts</h1>
-
-<table>
-  <% @blogposts.each do |blog| %>
-    <tr>
-      <th><%= blog.title %></th>
-    </tr>
-    <tr>
-      <td>
-        <%= blog.text %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= link_to 'Show', blogpost_path(blog) %>
-        <% if current_user %>
-          <%= link_to 'Edit', edit_blogpost_path(blog) %>
-          <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+<body>
+  <div class="header">
+    <h1>Blog Posts</h1>
+    <hr />
+  </div>
+  <div class = "blogtable">
+    <div class="blogpost">
+      <table>
+        <% @blogposts.each do |blog| %>
+          <tr><th><%= blog.title %></th></tr>
+          <tr><td><%= blog.text.html_safe %></td></tr>
+          <tr>
+            <td>
+              <%= link_to 'Show', blogpost_path(blog) %>
+              <% if current_user %>
+                <%= link_to 'Edit', edit_blogpost_path(blog) %>
+                <%= link_to 'Destroy', blogpost_path(blog), method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td><hr /></td>
+          </tr>
         <% end %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <hr />
-      </td>
-    </tr>
-  <% end %>
-</table>
-<hr />
-<% if current_user %>
-  <%= link_to 'New Post', new_blogpost_path %>
-<% end %>
+      </table>
+    </div>
+    <br />
+    <div class="newpost">
+      <% if current_user %>
+        <button><%= link_to 'New Post', new_blogpost_path %></button>
+      <% end %>
+    </div>
+  </div>
+</body>
