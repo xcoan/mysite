@@ -14,12 +14,36 @@
  *= require_self
  */
 
-.nav {
-   float: left;
-   display: inline-block;
- }
+body {
+  background-color: #D7DADB;
+}
 
-.usr {
-  float: right;
-  display: inline-block;;
+.nav ul{
+  list-style-type: none;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #555;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  background-color: #111;
+}
+
+#leftlink {
+  float: left;
+}
+
+#rightlink {
+  float:right;
 }

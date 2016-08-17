@@ -1,3 +1,56 @@
 // Place all the styles related to the blogposts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.blogtable {
+  text-align: center;
+}
+.blogpost {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  table {
+    width: 100%;
+  }
+}
+.newpost {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  :hover {
+    background-color: #111;
+  }
+  button {
+    border: none;
+    display: inline-block;
+    max-width: 10%;
+    height: 200%;
+    background-color: #555;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
+.container {
+  text-align: center;
+}
+.buttons {
+  :hover {
+    background-color: #111;
+  }
+  button {
+    border: none;
+    display: inline-block;
+    max-width: 10%;
+    height: 200%;
+    background-color: #555;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
