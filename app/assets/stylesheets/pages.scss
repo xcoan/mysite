@@ -7,17 +7,19 @@
   border: 1px solid black;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-  .contact_table {
-    display: inline-block;
+  .image-container {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    img {
-      width: 100px;
-      height: 100px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    }
-    td + td {
-      padding-left: 10px;
+    .images {
+      display: inline-block;
+      img {
+        max-height: 100px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+      }
+      a + a {
+        margin-left: 15px;
+      }
     }
   }
 }
