@@ -11,6 +11,13 @@
       <%= @blogpost.text.html_safe %>
     </p>
   </div>
+  <hr />
+  <div class="time">
+    <p>Article posted at <%= @blogpost.created_at.strftime("%l:%M%p %Z on %D") %></p>
+    <p>
+      Article last updated at <%= @blogpost.updated_at.strftime("%l:%M%p %Z on %D") %>
+    </p>
+  </div>
   <div class="buttons">
     <% if current_user %>
       <button><%= link_to 'Edit this Post', edit_blogpost_path(@blogpost) %></button>
