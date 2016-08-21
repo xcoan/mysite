@@ -1,0 +1,31 @@
+<div class="contactsites">
+  <h1>Contact Me</h1>
+  <p>I am available for contact in a variety of ways, including social media and email. Feel free to follow or add me!</p>
+
+  <div class = "image-container">
+    <div class="images">
+      <a href="http://facebook.com/xtheprogrammer" target="_blank"><img src="facebook.png" /></a>
+      <a href="http://instagram.com/xtheprogrammer" target="_blank"><img src="instagram.png" /></a>
+      <a href="http://twitter.com/xtheprogrammer" target="_blank"><img src="twitter.png" /></a>
+      <a href="http://github.com/xcoan" target="_blank"><img src="github.png" /></a>
+      <a href="http://linkedin.com/in/xcoan" target="_blank"><img src="linkedin.png" /></a>
+    </div>
+  </div>
+</div>
+
+<div class="contactform">
+  <h3>Contact Me</h3>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, :required => true %>
+    <%= f.input :email, :required => true %>
+    <%= f.input :message, :as => :text, :required => true %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
