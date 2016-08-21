@@ -9,9 +9,6 @@ Rails.application.routes.draw do
   # creates page for projects
   get 'projects' => 'pages#projects'
 
-  # creates route for contact page
-  get 'contact' => 'pages#contact'
-
   # signup new user
   get 'signup' => 'users#new'
 
@@ -21,5 +18,9 @@ Rails.application.routes.draw do
 
   # logout
   get 'logout' => 'sessions#destroy'
+
+  # Contact form
+  get 'contacts' => 'contacts#new'
+  resources "contacts", only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

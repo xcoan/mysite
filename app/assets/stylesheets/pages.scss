@@ -7,21 +7,6 @@
   border: 1px solid black;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-  .image-container {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    .images {
-      display: inline-block;
-      img {
-        max-height: 100px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-      }
-      a + a {
-        margin-left: 15px;
-      }
-    }
-  }
 }
 .main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
