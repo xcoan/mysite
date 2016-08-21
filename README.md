@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# xcoan/mysite
+-----------------------------------------------------------------------------------------------------------------------------
+# This is the repo for my personal website, located at http://www.xjcoan.com
 
-Things you may want to cover:
+# Ruby version 2.3.1
 
-* Ruby version
+# Rails 5.0
 
-* System dependencies
+# No special dependencies, everything should work off of bundle install, and normal rake commands.
 
-* Configuration
+# Postgres is used as the database, but only a couple tables exist currently
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# The site is currently deployed and maintained on Heroku.

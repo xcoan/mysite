@@ -11,9 +11,15 @@
 
   <body>
     <%= render "layouts/navbar" %>
+    <br />
+    <br />
     <%= yield %>
-    <% if current_user %>
-      <p>Signed in as: <%= current_user.name %></p>
-    <% end %>
+    <div class="usrinfo">
+      <% if current_user %>
+        <p>
+          Logged in as: <%= current_user.name %>
+        </p>
+      <% end %>
+    </div>
   </body>
 </html>
