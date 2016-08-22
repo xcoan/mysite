@@ -18,6 +18,8 @@
  @media only screen and (max-width: 500px) {
    .navcontainer {
      .nav {
+       margin-top: 10px;
+       margin-bottom: 10px;
        ul {
          list-style: none;
          background-color: #555;
@@ -26,10 +28,12 @@
          a {
            text-decoration: none;
            color: white;
-           height: 10%;
          }
        }
      }
+   }
+   .right {
+     visibility: hidden;
    }
  }
 
@@ -78,5 +82,9 @@ body {
   }
   #mobile {
     visibility: hidden;
+  }
+
+  .right {
+    float: right;
   }
 }
