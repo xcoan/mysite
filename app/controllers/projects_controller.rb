@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # showcases all projects
   def index
     @projects = Project.all
+    @page_title = "Projects"
   end
 
   # Shows one specific project
@@ -16,6 +17,7 @@ class ProjectsController < ApplicationController
   # edits an existing project
   def edit
     @project = Project.find(params[:id])
+    @page_title = "Edit Project " + @project.title
   end
 
   def update
