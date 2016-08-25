@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
 
   # adds routes for blog posts
-  resources :blogposts, :users
+  resources :blogposts, :users, :projects
 
   # creates index page at site route
   root 'pages#index'
-
-  # creates page for projects
-  get 'projects' => 'pages#projects'
 
   # signup new user
   get 'signup' => 'users#new'
