@@ -1,0 +1,37 @@
+<!-- Shows all projects -->
+<body>
+  <div class="header">
+    <h1>Blog Posts</h1>
+    <hr />
+  </div>
+  <div class = "projecttable">
+    <div class="project">
+      <table>
+        <% @projects.each do |project| %>
+          <tr><th><%= project.title %></th></tr>
+          <tr><td><%= project.description %></td></tr>
+          <tr><td><%= link_to "Project Link", project.url, target:"_blank" %></td></tr>
+          <tr>
+            <td>
+              <%= link_to 'Show', project_path(project) %>
+              <% if current_user %>
+                <%= link_to 'Edit', edit_project_path(project) %>
+                <%= link_to 'Destroy', project_path(project), method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td><hr /></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <br />
+    <div class="newpost">
+      <% if current_user %>
+        <button><%= link_to 'New Project', new_project_path %></button>
+      <% end %>
+    </div>
+  </div>
+</body>

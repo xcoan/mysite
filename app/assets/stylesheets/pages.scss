@@ -63,9 +63,20 @@
     }
     table {
       margin-left: 25px;
+      td {
+        font-size: 12pt;
+      }
       td + td {
         padding-left: 50px;
       }
     }
+  }
+  .projmain {
+    float: left;
+    width: 25%;
+  }
+  .projdesc {
+    float: right;
+    width: 75%;
   }
 }

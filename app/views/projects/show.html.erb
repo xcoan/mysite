@@ -1,0 +1,27 @@
+<div class = "container">
+  <div class = "title">
+    <h1>
+      <strong><%= @project.title %></strong>
+    </h1>
+    <hr />
+  </div>
+
+  <div class="text">
+    <p>
+      <%= @project.description %>
+    </p>
+  </div>
+  <hr />
+  <div class="link">
+    <p>
+      <%= link_to "Project Link", @project.url, target:"_blank" %>
+    </p>
+  </div>
+  <div class="buttons">
+    <% if current_user %>
+      <button><%= link_to 'Edit this Project', edit_project_path(@project) %></button>
+    <% end %>
+    <button><%= link_to 'Return to Project Index', projects_path %></button>
+  </div>
+
+</div>
