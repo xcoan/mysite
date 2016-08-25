@@ -11,6 +11,7 @@ class BlogpostsController < ApplicationController
   # creates route for editing a post
   def edit
     @blogpost = Blogpost.find(params[:id])
+    @page_title = "Editing Blog Post"
   end
 
   # U action. Renders routes for editing post
@@ -40,8 +41,8 @@ end
 
   # shows just one post
   def show
-    @page_title = "Blog Post " + params[:id]
     @blogpost = Blogpost.find(params[:id])
+    @page_title = "Blog Post " + @blogpost.title
   end
 
   # C action. Renders route defined in new
