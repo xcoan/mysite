@@ -7,7 +7,7 @@
   <div class = "blogtable">
     <div class="blogpost">
       <table>
-        <% @blogposts.each do |blog| %>
+        <% @blogposts.reverse_each do |blog| %>
           <tr><th><%= blog.title %></th></tr>
           <tr><td><%= blog.text.html_safe %></td></tr>
           <tr>

@@ -19,7 +19,7 @@ class BlogpostsController < ApplicationController
     @blogpost = Blogpost.find(params[:id])
 
     if @blogpost.update(blog_params)
-      redirect_to @blogpost
+      redirect_to blogposts_path
     else
       render 'edit'
     end
