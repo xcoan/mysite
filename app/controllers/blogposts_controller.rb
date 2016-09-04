@@ -19,7 +19,7 @@ class BlogpostsController < ApplicationController
     @blogpost = Blogpost.find(params[:id])
 
     if @blogpost.update(blog_params)
-      redirect_to @blogpost
+      redirect_to root
     else
       render 'edit'
     end
@@ -30,7 +30,7 @@ class BlogpostsController < ApplicationController
     @blogpost = Blogpost.find(params[:id])
     @blogpost.destroy
 
-    redirect_to blogposts_path
+    redirect_to root
 end
 
   # lists all posts
