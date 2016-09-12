@@ -1,15 +1,22 @@
-# README
+## README
+xcoan/mysite
 
-# xcoan/mysite
 -----------------------------------------------------------------------------------------------------------------------------
-# This is the repo for my personal website, located at http://www.xjcoan.com
 
-# Ruby version 2.3.1
+# Purpose
+This is the git repo for my personal website. It is hosted on heroku and live [here](http://www.xjcoan.com)
 
-# Rails 5.0
+# Technology Used
+This website is built using Ruby on Rails.
+The Rails version is 5.0.
+The Ruby version I'm using is 2.3
 
-# No special dependencies, everything should work off of bundle install, and normal rake commands.
+# Installation and Running
+Nothing special is needed to run the website, apart from normal rake commands.
+`bundle exec rake db:create`
+`bundle exec rake db:migrate`
+`rails server`
+Should all do the trick.
 
-# Postgres is used as the database, but only a couple tables exist currently
-
-# The site is currently deployed and maintained on Heroku.
+# Database
+Postgresql is used as the database for this project.
