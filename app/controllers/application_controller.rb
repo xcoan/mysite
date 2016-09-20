@@ -12,11 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_domain
-<<<<<<< HEAD
-    unless request.env['HTTP_HOST'] == 'www.xjcoan.com'
-=======
     unless request.env['HTTP_HOST'] == 'xjcoan.com'
->>>>>>> 6ac884a378d93726ad94142c3e695a1146995e70
       redirect_to "http://www.xjcoan.com", :status =&gt; 301
     end
   end
