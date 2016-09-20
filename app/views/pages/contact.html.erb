@@ -13,19 +13,10 @@
   </div>
 </div>
 
-<div class="contactform">
-  <h3>Contact Me</h3>
-
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.input :name, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :message, :as => :text, :required => true %>
-    <div class= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-    </div>
-    <div>
-      </br>
-      <%= f.submit "Send Message" %>
-    </div>
-  <% end %>
+<div class="email">
+  <p>
+    Send me an email:
+  </p>
+  <br />
+  <a href="mailto:xjcoan@gmail.com?Subject=Website%20Contact" target="_top">Send Mail</a>
 </div>
