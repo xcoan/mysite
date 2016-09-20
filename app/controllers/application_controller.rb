@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_filter :set_title, :ensure_domain
+  before_filter :set_title
   helper_method :current_user
 
   def current_user
@@ -9,12 +9,6 @@ class ApplicationController < ActionController::Base
 
   def require_user
     redirect_to '/login' unless current_user
-  end
-
-  def ensure_domain
-    unless request.env['HTTP_HOST'] == 'xjcoan.com'
-      redirect_to "http://www.xjcoan.com", :status =&gt; 301
-    end
   end
 
   private
