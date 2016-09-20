@@ -20,6 +20,11 @@
      border: 1px solid;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
    }
+   .email {
+     text-align: center;
+     border: 1px solid;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+   }
  }
 
 
@@ -78,5 +83,11 @@
   .projdesc {
     float: right;
     width: 75%;
+  }
+
+  .email {
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
   }
 }

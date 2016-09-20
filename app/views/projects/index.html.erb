@@ -1,32 +1,31 @@
 <!-- Shows all projects -->
 <body>
   <div class="header">
-    <h1>Blog Posts</h1>
+    <h1>My Projects</h1>
     <hr />
+    <p>
+      These are descriptions of some of my projects. All source code can be found on GitHub (unless stated otherwise).
+    </p>
   </div>
   <div class = "projecttable">
-    <div class="project">
-      <table>
-        <% @projects.each do |project| %>
-          <tr><th><%= project.title %></th></tr>
-          <tr><td><%= project.description %></td></tr>
-          <tr><td><%= link_to "Project Link", project.url, target:"_blank" %></td></tr>
-          <tr>
-            <td>
-              <%= link_to 'Show', project_path(project) %>
-              <% if current_user %>
-                <%= link_to 'Edit', edit_project_path(project) %>
-                <%= link_to 'Destroy', project_path(project), method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-              <% end %>
-            </td>
-          </tr>
-          <tr>
-            <td><hr /></td>
-          </tr>
-        <% end %>
-      </table>
-    </div>
+    <% @projects.each do |project| %>
+      <div class="project">
+        <h1>
+          <%= project.title %>
+        </h1>
+        <p>
+          <%= project.description %>
+        </p>
+        <p>
+          <%= link_to "Project Link", project.url, target:"_blank" %>
+        </p>
+          <% if current_user %>
+            <%= link_to 'Edit', edit_project_path(project) %>
+            <%= link_to 'Destroy', project_path(project), method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+          <% end %>
+      </div>
+    <% end %>
     <br />
     <div class="newpost">
       <% if current_user %>
