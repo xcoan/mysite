@@ -25,10 +25,38 @@
      border: 1px solid;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
    }
+   .contactsites {
+     text-align: center;
+     border: 1px solid;
+     margin-bottom: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+   }
+   .image-container {
+     width: 100%;
+     img {
+       width: 15%;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+     }
+   }
  }
 
 
 @media (min-width: 1024px) {
+
+  .contactsites {
+    text-align: center;
+    border: 1px solid;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .image-container {
+    img {
+      width: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    }
+  }
+
   .topview {
     text-align: center;
     border: 1px solid black;
