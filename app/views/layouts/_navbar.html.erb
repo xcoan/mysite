@@ -25,8 +25,6 @@
       <li class="right" style="float: right;">
         <% if current_user %>
           <%= link_to 'Logout', controller: 'sessions', action: 'destroy' %>
-        <% else %>
-          <%= link_to 'Login', controller: 'sessions', action: 'new' %>
         <% end %>
       </li>
     </ul>
